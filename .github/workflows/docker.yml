@@ -1,4 +1,4 @@
-name: Build & Test Docker Image
+name: Build, Test & Dockerize
 
 on:
   push:
@@ -7,12 +7,18 @@ on:
     branches: [main]
 
 jobs:
-  docker:
+  test-and-build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Compile & run unit tests
+        run: |
+          g++ -std=c++17 StockAI/test.cpp -o test.out
+          ./test.out
+
       - name: Build Docker image
         run: docker build -t stockai .
+
