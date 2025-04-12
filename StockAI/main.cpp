@@ -6,6 +6,12 @@
 //
 
 #include <iostream>
+#include <string>
+
+std::string getEnvChar(const std:: string &key) {
+    const char* val = std::getenv(key.c_str());
+    return val == nullptr ? "" : std::string(val);
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
