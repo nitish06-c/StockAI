@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <cstdio>
 
 std::string getEnvChar(const std:: string &key) {
     const char* val = std::getenv(key.c_str());
@@ -14,8 +16,22 @@ std::string getEnvChar(const std:: string &key) {
 }
 
 std::string getData(const std::string& ticker, const std::string& stockApiKey) {
-    //TODO
-    return "";
+    std::string url = "https://finnhub.io/api/v1/quote?symbol=" + ticker + "&token=" + stockApiKey;
+    std::string command = "curl -s \"" + url + "\"";
+    
+    FILE* pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        return "Could not get any stock data";
+    }
+    char buffer[128];
+    std::stringstream res;
+    
+    while (fgets(buffer, sizeof buffer, pipe) != nullptr) {
+        res << buffer;
+    }
+    
+    pclose(pipe);
+    return res.str();
 }
 
 std::string gptCall(const std::string &analysis, const std::string openaiKey) {
