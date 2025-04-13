@@ -21,7 +21,7 @@ jobs:
 
       - name: Compile & run unit tests
         run: |
-          g++ -std=c++17 -IStockAI -IStockAI/include StockAI/test.cpp -o test.out
+          g++ -std=c++17 -IStockAI -IStockAI/include StockAI/test.cpp StockAI/utils.cpp -o test.out
           ./test.out
 
       - name: Build Docker image
