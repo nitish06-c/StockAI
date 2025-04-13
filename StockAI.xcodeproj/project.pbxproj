@@ -28,6 +28,7 @@
 		6BE2DFD52DA9F42C00081CC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6BE2DFE02DAB11A800081CC6 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		6BE2DFE12DAB337700081CC6 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		6BE2DFE42DAB357200081CC6 /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				6BE2DFDE2DAB118500081CC6 /* include */,
 				6BE2DFD52DA9F42C00081CC6 /* main.cpp */,
 				6BE2DFE12DAB337700081CC6 /* test.cpp */,
+				6BE2DFE42DAB357200081CC6 /* utils.hpp */,
 			);
 			path = StockAI;
 			sourceTree = "<group>";
