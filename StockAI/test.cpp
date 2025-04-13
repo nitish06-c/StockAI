@@ -6,7 +6,7 @@
 #include <cassert>
 #include <string>
 #include <iostream>
-
+#include <iomanip>
 std::string test1() {
     return "StockAI ready!";
 }
