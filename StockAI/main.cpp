@@ -1,7 +1,7 @@
 //  main.cpp
 //  StockAI
 
-#include "StockAI/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <string>
 #include <sstream>

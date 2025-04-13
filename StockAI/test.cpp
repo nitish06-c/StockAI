@@ -2,7 +2,7 @@
 //  test.cpp
 //  StockAI
 //
-#include "StockAI/utils.hpp"
+#include "utils.hpp"
 #include <cassert>
 #include <string>
 #include <iostream>
